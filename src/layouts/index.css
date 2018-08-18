@@ -1,0 +1,92 @@
+body{
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   margin:0;
+   font-size: 16px;
+   -webkit-font-smoothing: antialiased;
+   line-height: 1.4;
+}
+
+a{
+  color: #5334f5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.Hero{
+  background: url('../images/wallpaper3.jpg');
+  height: 920px;
+  background-size: cover;
+  background-position: center;
+}
+
+.HeroGroup{
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.Hero h1{
+  margin:0;
+  color:white;
+  font-size: 48px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.15s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero p{
+  color:rgba(255,255,255, 0.8);
+  font-size: 24px;
+  line-height: 1.5;
+  animation: HeroAnimation 3s 0.25s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0;
+}
+
+.Hero a{
+  font-size: 16px;
+  font-weight: 600;
+  color:white;
+  text-transform: uppercase;
+  background: rgba(0,0,0, 0.7);
+  padding: 12px 24px;
+  border: 1px solid rgba(255,255,255, 0.125);
+  border-radius: 24px;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero a:hover{
+  background: white;
+  color: black;
+  box-shadow: 0 8px 16px rgba(0,0,0, 0.7);
+  transform: translateY(-3px);
+}
+
+@media(max-width:640px){
+    .HeroGroup{
+      padding: 96px 24px;
+    }
+
+    .Hero h1{
+      font-size: 40px;
+    }
+
+    .Hero p{
+      font-size: 20px;
+    }
+}
+
+@keyframes HeroAnimation{
+  0%{
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
